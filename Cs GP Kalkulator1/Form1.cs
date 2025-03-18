@@ -86,15 +86,21 @@ namespace Cs_GP_Kalkulator1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            //tmp save
+            //subtract tmp save
             number1 = richTextBox2.Text;
             richTextBox2.Text += $"{Environment.NewLine}-{Environment.NewLine}";
             numbertmp = richTextBox2.Text;
         }
 
+        private void button16_Click(object sender, EventArgs e)
+        {
+            //clear everything
+            number1 = ""; number2 = ""; numbertmp = ""; richTextBox2.Text = "";
+        }
+
         private void button13_Click(object sender, EventArgs e)
         {
-            //tmp save
+            //multiplication tmp save
             number1 = richTextBox2.Text;
             richTextBox2.Text += $"{Environment.NewLine}*{Environment.NewLine}";
             numbertmp = richTextBox2.Text;
@@ -102,7 +108,7 @@ namespace Cs_GP_Kalkulator1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            //tmp save
+            //division tmp save
             number1 = richTextBox2.Text;
             richTextBox2.Text += $"{Environment.NewLine}/{Environment.NewLine}";
             numbertmp = richTextBox2.Text;
