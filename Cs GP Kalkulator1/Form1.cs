@@ -11,11 +11,12 @@ using static Cs_GP_Kalkulator1.CountClassGPK;
 
 namespace Cs_GP_Kalkulator1
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         double Result = 0;
-        string number1 = "", number2="",numbertmp= "",strresult="";
+        string number1 = "", number2 = "", numbertmp = "", strresult = "";
         Boolean numb1bool = false, numb2bool = false;
+        int formatingNewLineLicznik,formPlusLicznik,formMinusLicznik,formMnuLicznik,formDzielLicznik = 0;
         CountClassGPK countClassGPinstance = new CountClassGPK();
         public Form1()
         {
@@ -40,7 +41,7 @@ namespace Cs_GP_Kalkulator1
         {
             richTextBox2.Text += "2";
         }
-       
+
         private void button3_Click_1(object sender, EventArgs e)
         {
             richTextBox2.Text += "3";
@@ -143,8 +144,42 @@ namespace Cs_GP_Kalkulator1
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
 
+            /*if (richTextBox2.Text.Contains("+"))
+            {
+                formPlusLicznik += 1;
+            }
+            if (richTextBox2.Text.Contains("-"))
+            {
+                formMinusLicznik += 1;
+            }
+            if (richTextBox2.Text.Contains("*"))
+            {
+                formMnuLicznik += 1;
+            }
+            if (richTextBox2.Text.Contains("*"))
+            {
+                formDzielLicznik += 1;
+            }
+
+            if (formPlusLicznik > 2 || formMinusLicznik > 2 || formMnuLicznik > 2 || formDzielLicznik > 2)
+            {
+                MessageBox.Show("Too many counting symbols in the text box");
+            }
+
+            if (richTextBox2.Text.Contains(Environment.NewLine))
+            {
+                formatingNewLineLicznik += 1;
+            }
+
+            if (formatingNewLineLicznik > 3)
+            {
+                MessageBox.Show("Exiding formating newline limit, Please fix formating");
+            }*/
+                
         }
 
-        
+
     }
+
+
 }

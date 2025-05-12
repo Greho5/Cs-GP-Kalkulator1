@@ -44,9 +44,9 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button16 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button16 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -226,10 +226,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(336, 78);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 15;
+            this.button16.Text = "C";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
             // richTextBox2
             // 
+            this.richTextBox2.DetectUrls = false;
             this.richTextBox2.Location = new System.Drawing.Point(6, 19);
             this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ShowSelectionMargin = true;
             this.richTextBox2.Size = new System.Drawing.Size(776, 96);
             this.richTextBox2.TabIndex = 18;
             this.richTextBox2.Text = "123";
@@ -245,16 +257,6 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(336, 78);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 15;
-            this.button16.Text = "C";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // Form1
             // 
