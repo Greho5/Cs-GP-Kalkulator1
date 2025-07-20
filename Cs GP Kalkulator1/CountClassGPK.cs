@@ -14,7 +14,7 @@ namespace Cs_GP_Kalkulator1
         public string countFunction(string inputNumberGP)
         {
             temp = inputNumberGP;
-            temp = temp.Replace("\n",String.Empty).Replace("\r", String.Empty).Replace("\t", String.Empty);
+            temp = temp.Replace("\n", String.Empty).Replace("\r", String.Empty).Replace("\t", String.Empty);
             Console.WriteLine(temp);
             Console.WriteLine("####");
             if (inputNumberGP.Contains("+"))
@@ -49,9 +49,11 @@ namespace Cs_GP_Kalkulator1
                 number2 = tempTable[1];
                 result = Convert.ToDouble(number1) / Convert.ToDouble(number2);
             }
-            Console.WriteLine(number1 +" _ "+ number2 +" _ "+ znak +" _ "+ result);
-            return (number1 + Environment.NewLine + znak + Environment.NewLine + number2 + Environment.NewLine + result.ToString());
+            Console.WriteLine(number1 + " _ " + number2 + " _ " + znak + " _ " + result);
+            //return (number1 + Environment.NewLine + znak + Environment.NewLine + number2 + Environment.NewLine + result.ToString());
+            return (number1 + " " + znak + " " + number2 + " = " + result.ToString());
         }
+
 
     }
 }

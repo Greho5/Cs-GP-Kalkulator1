@@ -16,8 +16,11 @@ namespace Cs_GP_Kalkulator1
         double Result = 0;
         string number1 = "", number2 = "", numbertmp = "", strresult = "";
         Boolean numb1bool = false, numb2bool = false;
-        int formatingNewLineLicznik,formPlusLicznik,formMinusLicznik,formMnuLicznik,formDzielLicznik = 0;
+        int formatingNewLineLicznik, formPlusLicznik, formMinusLicznik, formMnuLicznik, formDzielLicznik = 0;
         CountClassGPK countClassGPinstance = new CountClassGPK();
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -76,6 +79,13 @@ namespace Cs_GP_Kalkulator1
         {
             richTextBox2.Text += "9";
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         private void button11_Click(object sender, EventArgs e)
         {
@@ -139,8 +149,46 @@ namespace Cs_GP_Kalkulator1
             strresult = countClassGPinstance.countFunction(richTextBox2.Text);
             richTextBox2.Text = "";
             richTextBox2.Text = strresult;
+            //listBox1.
+        }
+        private void button17_Click(object sender, EventArgs e)
+        {
+            //history
+            if (listBox1.Visible == false)
+            {
+                listBox1.Visible = true;
+            }
+            else
+            {
+                listBox1.Visible = false;
+            }
+
         }
 
+        private void button18_Click(object sender, EventArgs e)
+        {
+            //history add
+            if (richTextBox2.Text != null || richTextBox2.Text != "")
+            {
+                listBox1.BeginUpdate();
+                listBox1.Items.Add(richTextBox2.Text);
+                listBox1.EndUpdate();
+            }
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            //history del
+            //listBox1.Items.Remove();
+            if (listBox1.SelectedItems.Count != 0)
+            {
+                while (listBox1.SelectedIndex != -1)
+                {
+                    listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                }
+            }
+        }
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
 
